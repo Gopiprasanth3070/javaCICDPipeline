@@ -47,9 +47,9 @@
 	</distributionManagement>
 	-->
 	<scm>
-		<connection>scm:git:git@github.com:vivekchopra91/javaCICDpipeline.git</connection>
-		<developerConnection>scm:git:git@github.com:vivekchopra91/javaCICDpipeline.git</developerConnection>
-		<url>git@github.com:vivekchopra91/javaCICDpipeline.git</url>
+		<connection>scm:git:git@github.com:Gopiprasanth9397/javaCICDPipeline.git</connection>
+		<developerConnection>scm:git:git@github.com:Gopiprasanth9397/javaCICDPipeline.git</developerConnection>
+		<url>git@github.com:Gopiprasanth9397/javaCICDPipeline.git</url>
 		<tag>HEAD</tag>
 	</scm>
 

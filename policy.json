@@ -1,0 +1,13 @@
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "AllowS3Access",
+			"Principal": "*",
+			"Effect": "Allow",
+			"Action": ["S3:*"],
+			"Resource": "arn:aws:s3:::gopi.s3/*"
+		}
+	]
+}
+
