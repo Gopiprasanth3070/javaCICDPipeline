@@ -1,7 +1,7 @@
 # Authentication to AWS from Terraform code 
 provider "aws" {
     region = "ap-south-1"
-    profile = "devops"
+    profile = "windows"
 }
 # Create a VPC in AWS part of region i.e. Mumbai 
 resource "aws_vpc" "cloudbinary_vpc" {
@@ -255,9 +255,9 @@ resource "aws_security_group" "cloudbinary_sg" {
 
 # Bastion - Windows 
 resource "aws_instance" "cloudbinary_bastion" {
-    ami = "ami-013f17f36f8b1fefb"
+    ami = "ami-0aa96960b27e44dc9"
     instance_type = "t2.micro"
-    key_name = "cloudbinary_key"
+    key_name = "softodevops1"
     subnet_id = "${aws_subnet.cloudbinary_public_subnet1.id}"
     vpc_security_group_ids = ["${aws_security_group.cloudbinary_sg_bastion.id}"]
     tags = {
@@ -298,7 +298,7 @@ data "aws_ami" "selected_app_ami" {
 resource "aws_instance" "cloudbinary_web" {
     ami = "${data.aws_ami.selected_app_ami.id}"
     instance_type = "t2.micro"
-    key_name = "cloudbinary_key"
+    key_name = "softodevops1"
     subnet_id = "${aws_subnet.cloudbinary_private_subnet1.id}"
     vpc_security_group_ids = ["${aws_security_group.cloudbinary_sg.id}"]
     #user_data = "${file("web.sh")}"
