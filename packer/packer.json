@@ -7,8 +7,8 @@
         "instance_type": "t2.micro",
         "source_ami": "ami-0851b76e8b1bce90b",
         "ami_aws_account_id": "170690553296",
-        "iam_profile": "cicd-packer"
-
+        "iam_profile": "windows-10-rog"
+        
     },
     "builders": [
         {

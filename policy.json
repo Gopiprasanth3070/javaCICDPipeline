@@ -1,13 +1,12 @@
 {
-	"Version": "2012-10-17",
-	"Statement": [
-		{
-			"Sid": "AllowS3Access",
-			"Principal": "*",
-			"Effect": "Allow",
-			"Action": ["S3:*"],
-			"Resource": "arn:aws:s3:::gopi.s3/*"
-		}
-	]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AllowS3Access",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "S3:*",
+            "Resource": "arn:aws:s3:::cicd.gopi/*"
+        }
+    ]
 }
-
