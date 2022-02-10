@@ -1,18 +1,19 @@
 {
     "variables":{
+        "packer_profile": "packer-ec2-s3",
         "applicaiton_name": "softobiz",
         "application_version": "1.0.0",
-        "region": "us-east-1",
+        "region": "ap-south-1",
         "instance_type": "t2.micro",
-        "source_ami": "ami-04505e74c0741db8d",
-        "ami_aws_account_id": "942537291803"
+        "source_ami": "ami-0851b76e8b1bce90b",
+        "ami_aws_account_id": "170690553296",
+        "iam_profile": "cicd-packer"
 
     },
     "builders": [
         {
             "name": "{{ user `applicaiton_name` }}",
             "type": "amazon-ebs",
-            "profile": "vd",
             "ssh_username": "ubuntu",
             "force_deregister": "true",
             "force_delete_snapshot": "true",
@@ -20,7 +21,11 @@
             "region": "{{ user  `region` }}",
             "source_ami": "{{ user `source_ami` }}",
             "instance_type":  "{{ user `instance_type` }}",
-            "ami_name": "{{ user `applicaiton_name` }}-{{ user `application_version` }}"
+            "ami_name": "{{ user `applicaiton_name` }}-{{ user `application_version` }}",
+            "tags": {
+                "Name": "{{user `applicaiton_name`}}",
+                "CreatedBy": "packer"       
+            }
         }
     ],
     "provisioners": [
