@@ -6,8 +6,8 @@
         "region": "ap-south-1",
         "instance_type": "t2.micro",
         "source_ami": "ami-08ee6644906ff4d6c",
-        "ami_aws_account_id": "170690553296"
-
+        "ami_aws_account_id": "170690553296",
+        "iam_profile": "windows-10-rog"
     },
     "builders": [
         {
