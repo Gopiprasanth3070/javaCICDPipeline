@@ -1,5 +1,4 @@
 version: 0.2
-
 env:
   parameter-store:
     AWS_ACCESS_KEY_ID_PARAM: /CodeBuild/AWS_ACCESS_KEY_ID
